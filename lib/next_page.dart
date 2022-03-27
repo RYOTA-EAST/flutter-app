@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NextPage extends StatefulWidget {
-  const NextPage({Key? key}) : super(key: key);
+  final String title;
+  NextPage(this.title);
 
   @override
   State<NextPage> createState() => _NextPageState();
@@ -12,7 +13,9 @@ class _NextPageState extends State<NextPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
@@ -34,12 +37,12 @@ class _NextPageState extends State<NextPage> {
             // 余白
             Padding(padding: EdgeInsets.all(20)),
             Row(
-              children: [
-                Container(
-                    width: 50,
-                    child: Text('PW')
-                ),
-                Container(
+                  children: [
+                    Container(
+                        width: 50,
+                        child: Text('PW')
+                    ),
+                    Container(
                     width: 20,
                     child: Text(':')
                 ),

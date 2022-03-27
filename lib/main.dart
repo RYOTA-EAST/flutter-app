@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children:[
                   ListTile(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => NextPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => NextPage(titleList[i])));
                     },
                     leading: Icon(Icons.vpn_key),
                     title: Text(titleList[i])
